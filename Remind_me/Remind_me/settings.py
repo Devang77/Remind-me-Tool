@@ -76,9 +76,12 @@ WSGI_APPLICATION = 'Remind_me.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase', # This is where you put the name of the db file. 
-                 # If one doesn't exist, it will be created at migration time.
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'remind_me_later',
+        'USER':'root',
+        'PASSWORD':'',
+        'HOST':'127.0.0.1',
+        'PORT':'3306'
     }
 }
 SMS_BACKEND = 'sms.backends.console.SmsBackend'
